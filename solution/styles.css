@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: hsl(30, 18%, 87%);
+    background-color: hsl(30, 54%, 90%);
     width: 1440px;
 }
 
@@ -14,25 +14,34 @@ h1 {
     font-weight: 400;
     font-style: normal;
   }
-  
+h3 {
+    font-family: "Young Serif";
+    font-weight: 400;
+    color: hsl(14, 45%, 36%);
+}
 
 p {
     color: hsl(30, 10%, 34%);
     font-size: 16px;
+    font-family: "Outfit";
     margin: 15px 0;
 }
 
-.container {
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 20px;
-    width: 50%;
+    width: 1440px;
+    max-width: 700px;
     margin: 3rem auto;
-    border-radius: 10px;
-    background-color: hsl(330, 100%, 98%);
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 100%);
 }
 
 img {
-    width: 100%;
-    border-radius: 10px;
+    max-width: 650px;
+    border-radius: 15px;
 }
 
 section {
@@ -40,30 +49,65 @@ section {
 }
 
 #title{
+    font-family: "Outfit";
+    font-weight: bold;
     font-size: 1rem;
     color: hsl(332, 51%, 32%);
 }
 .preparation-time {
-    background-color: hsl(30, 18%, 87%);
+    background-color: hsl(330, 100%, 98%);
     padding: 20px 0 0 20px;
-    border-radius: 10px;
+    margin: 0;
+    border-radius: 15px;
 }
 
 ul, ol {
+    font-size: 16px;
+    font-family: "Outfit";
     padding: 10px 0 10px 25px;
 }
 li {
-    color: hsl(30, 10%, 34%);
+    color: hsl(24, 5%, 18%);
     padding: 8px;
 }
 
-h3 {
-    font-family:;
-    color: hsl(14, 45%, 36%);
+li span {
+    font-weight: 600;
 }
 
 .border-line {
     border: 1px solid hsl(30, 18%, 87%);
+}
+
+.table {
+	width: 600px;
+	margin: 0 35px 20px 0;
+    margin-right: 35px;
+    border-collapse: collapse;
+}
+
+.table tr {
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.table tr:last-child {
+    border: none;
+}
+
+td {
+    padding: 10px;
+    font-family: "Outfit";
+}
+
+td:first-child {
+    color: hsl(30, 10%, 34%);
+    padding-left: 28px;
+}
+
+td:last-child {
+    color: hsl(14, 45%, 36%);
+    font-weight: 600;
+    border-bottom: none;
 }
 
 .attribution {
