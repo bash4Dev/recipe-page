@@ -6,17 +6,36 @@
 
 body {
     background-color: hsl(30, 54%, 90%);
-    width: 1440px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main {
+    margin: 20px auto;
+    padding: 20px;
+    width: 40vw;
+    border-radius: 15px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+header {
+    border-radius: 15px;
+}
+header img {
+    border-radius: 15px;
+    width: 100%;
 }
 
 h1 {
     font-family: "Young Serif", serif;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
   }
 h3 {
     font-family: "Young Serif";
-    font-weight: 400;
+    font-weight: 600;
     color: hsl(14, 45%, 36%);
 }
 
@@ -28,25 +47,12 @@ p {
     text-wrap: wrap;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-    width: 1440px;
-    max-width: 700px;
-    margin: 3rem auto;
-    border-radius: 20px;
-    background-color: hsl(0, 0%, 100%);
-}
-
-img {
-    max-width: 650px;
-    border-radius: 15px;
-}
-
 section {
-    margin: 1.5rem 0;
+    margin: 1rem 0;
+}
+section:last-of-type {
+    margin-bottom: -10px;
+    padding: 0;
 }
 
 #title{
@@ -98,7 +104,6 @@ td {
     padding: 10px 0;
     font-family: "Outfit";
 }
-
 td:first-child {
     color: hsl(30, 10%, 34%);
     padding-left: 28px;
@@ -110,54 +115,6 @@ td:last-child {
     border-bottom: none;
 }
 
-@media screen and (max-width: 655px) {
-    body {
-        width: 375px;
-        margin: 0;
-        padding: 0;
-    }
-    main {
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        width: 100%;
-        margin: 0;
-        background-color: hsl(0, 0%, 100%);
-        border-radius: 0;
-    }
-    img {
-        max-width: 100%;
-        border-radius: 0;
-    }
-
-    section {
-        margin: 8px 10px;
-        padding: 8px 10px;
-    }
-
-    .preparation-time {
-        background-color: hsl(330, 100%, 98%);
-        padding: 20px 0 0 20px;
-        margin: 0 20px;
-        border-radius: 15px;
-    }
-
-    .border-line {
-        margin: 0 20px;
-    }
-
-    .table {
-        width: 100%;
-        margin: 0;
-    }
-    
-    .attribution {
-        display: none;
-    }
-}
-
 .attribution {
     margin: 0;
     padding: 0;
@@ -166,4 +123,72 @@ td:last-child {
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 510px) and (max-width: 686px) {
+    main {
+        width: 80%;
+        padding: 0;
+        border-radius: 0;
+    }
+    section {
+        padding: 0 20px;
+    }
+    section:last-of-type {
+        margin-bottom: 0;
+    }
+    
+    header {
+        width: 100%;
+        border-radius: 0;
+    }
+    header img {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .preparation-time {
+        background-color: hsl(330, 100%, 98%);
+        padding: 20px;
+        margin:  0 20px;
+        border-radius: 15px;
+    }
+
+    .preparation-time, .nutrition, .border-line {
+        margin: 30px 20px;
+    }
+}
+
+@media (max-width: 509px) {
+    main {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+    header {
+        width: 100%;
+        border-radius: 0;
+    }
+    header img {
+        width: 100%;
+        border-radius: 0;
+    }
+    section {
+        padding: 0 50px;
+    }
+    section:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .preparation-time {
+        background-color: hsl(330, 100%, 98%);
+        padding: 20px;
+        margin:  0 20px;
+        border-radius: 15px;
+    }
+
+    .preparation-time, .nutrition, .border-line {
+        margin: 30px 50px;
+    }
 }
